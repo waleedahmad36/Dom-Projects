@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        *{transition: all 0.2s ease-in-out;}
+        body{background: #000;color: #fff;font-family: "Roboto", sans-serif;}
+        center{
+            margin-top: 5vh;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2vw;
+            min-height: 90vh;
+        }
+        .clrchange{
+            width: 200px;
+            height: 200px;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 1px solid rgba(0,0,0,0.8);
+        }
+        .clrchange:hover{
+            scale: 1.1;
+        }
+        #red{
+            background-color: red;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+        #pink{
+            background-color: pink;
+        }
+        #aqua{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <center>Exploring Dom😍Background Changer🚀</center>
+    <div class="container">
+    <div class="clrchange"  id="red"></div>
+    <div class="clrchange"  id="yellow"></div>
+    <div class="clrchange"  id="pink"></div>
+    <div class="clrchange" id="aqua"></div>
+</div>
+
+    <script>
+        var clrchangers = document.querySelectorAll('.clrchange')
+        var body = document.querySelector('body')
+        clrchangers.forEach((value)=>{
+            value.addEventListener('click',(e)=>{
+                console.log(e.target.id)
+                body.style.color = '#000'
+                if(e.target.id === 'red'){body.style.background= e.target.id}
+                if(e.target.id === 'yellow'){body.style.background= e.target.id}
+                if(e.target.id === 'pink'){body.style.background= e.target.id}
+                if(e.target.id === 'aqua'){body.style.background= e.target.id}
+            })
+        })
+    </script>
+</body>
+</html>
